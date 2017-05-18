@@ -1,0 +1,27 @@
+{# src/NOAH/PlatformBundle/Resources/views/Advert/edit.html.twig #}
+
+{% extends "NOAHPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+    ModifY une annonce - {{ parent() }}
+{% endblock %}
+
+{% block noahplatform_body %}
+
+    <h2>Modifay une annonce</h2>
+
+    {{ include("NOAHPlatformBundle:Advert:form.html.twig") }}
+
+    <p>
+        Vous éditez une annonce déjà existante, merci de ne pas changer
+        l'esprit générale de l'annonce déjà publiée.
+    </p>
+
+    <p>
+        <a href="{{ path('noah_platform_view', {'id': advert.id}) }}" class="btn btn-default">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            Retour à l'annonce
+        </a>
+    </p>
+
+{% endblock %}

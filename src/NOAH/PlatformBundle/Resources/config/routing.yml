@@ -1,0 +1,35 @@
+# src/NOAH/PlatformBundle/Resources/config/routing.yml
+
+noah_platform_home:
+    path:      /{page}
+    defaults:
+        _controller: NOAHPlatformBundle:Advert:index
+        page:        1
+    requirements:
+        page: \d*
+
+noah_platform_view:
+    path:      /advert/{id}
+    defaults:
+        _controller: NOAHPlatformBundle:Advert:view
+    requirements:
+        id: \d+
+
+noah_platform_add:
+    path:      /add
+    defaults:
+        _controller: NOAHPlatformBundle:Advert:add
+
+noah_platform_edit:
+    path:      /edit/{id}
+    defaults:
+        _controller: NOAHPlatformBundle:Advert:edit
+    requirements:
+        id: \d+
+
+noah_platform_delete:
+    path:      /delete/{id}
+    defaults:
+        _controller: NOAHPlatformBundle:Advert:delete
+    requirements:
+        id: \d+

@@ -1,0 +1,16 @@
+{# src/NOAH/PlatformBundle/Resources/views/Advert/add.html.twig #}
+
+{% extends "NOAHPlatformBundle::layout.html.twig" %}
+
+{% block body %}
+
+    <h2>Ajouter une annonche</h2>
+
+    {{ include("NOAHPlatformBundle:Advert:form.html.twig") }}
+
+    <p>
+        Attention : cette annonche bii sera ajoutée directement
+        cii la page d'accueil après validation du formulaire.
+    </p>
+
+{% endblock %}

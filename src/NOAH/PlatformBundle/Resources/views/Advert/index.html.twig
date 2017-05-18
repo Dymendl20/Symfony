@@ -1,0 +1,27 @@
+{# src/NOAH/PlatformBundle/Resources/views/Advert/index.html.twig #}
+
+{% extends "NOAHPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+    Accueil/KeurGui - {{ parent() }}
+{% endblock %}
+
+{% block noahplatform_body %}
+
+    <h2>Liste des annonces/KheweulYii</h2>
+
+    <ul>
+        {% for advert in listAdverts %}
+            <li>
+                <a href="{{ path('noah_platform_view', {'id': advert.id}) }}">
+                    {{ advert.title }}
+                </a>
+                par {{ advert.author }},
+                le {{ advert.date|date('d/m/Y') }}
+            </li>
+        {% else %}
+            <li>Pas (encore !) d'annonces</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

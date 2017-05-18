@@ -1,0 +1,9 @@
+# app/config/routing.yml
+
+noah_platform:
+    resource: "@NOAHPlatformBundle/Resources/config/routing.yml"
+    prefix:   /platform
+
+# On inclut également les routes de notre CoreBundle, sans préfixe
+#noah_core:
+#    resource: "@NOAHCoreBundle/Resources/config/routing.yml"
